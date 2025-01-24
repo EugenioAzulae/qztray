@@ -14,7 +14,7 @@ public class Constants {
     public static final String HEXES = "0123456789ABCDEF";
     public static final char[] HEXES_ARRAY = HEXES.toCharArray();
     public static final int BYTE_BUFFER_SIZE = 8192;
-    public static final Version VERSION = Version.valueOf("2.2.5-SNAPSHOT");
+    public static final Version VERSION = Version.valueOf("2.2.5-Azulae");
     public static final Version JAVA_VERSION = SystemUtilities.getJavaVersion();
     public static final String JAVA_VENDOR = System.getProperty("java.vendor");
 
@@ -31,13 +31,13 @@ public class Constants {
 
     public static final int BORDER_PADDING = 10;
 
-    public static final String ABOUT_TITLE = "QZ Tray";
-    public static final String ABOUT_EMAIL = "support@qz.io";
-    public static final String ABOUT_URL = "https://qz.io";
-    public static final String ABOUT_COMPANY = "QZ Industries, LLC";
-    public static final String ABOUT_CITY = "Canastota";
-    public static final String ABOUT_STATE = "NY";
-    public static final String ABOUT_COUNTRY = "US";
+    public static final String ABOUT_TITLE = "QZ Tray - Azulae version";
+    public static final String ABOUT_EMAIL = "info@azulae.es";
+    public static final String ABOUT_URL = "https://grupoazulae.com/";
+    public static final String ABOUT_COMPANY = "Azulae S.L.";
+    public static final String ABOUT_CITY = "Badajoz";
+    public static final String ABOUT_STATE = "BA";
+    public static final String ABOUT_COUNTRY = "ES";
 
     public static final String ABOUT_LICENSING_URL = Constants.ABOUT_URL + "/licensing";
     public static final String ABOUT_SUPPORT_URL = Constants.ABOUT_URL + "/support";
