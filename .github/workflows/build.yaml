@@ -17,7 +17,7 @@ jobs:
       - run: Start-Process -Wait ./out/qz-tray-*.exe -ArgumentList "/S"
       - run: "&'C:/Program Files/QZ Tray/qz-tray.exe' --wait --version|Out-Null"
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-build
           path: out/qz-tray-*.exe
