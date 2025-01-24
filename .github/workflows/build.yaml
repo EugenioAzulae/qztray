@@ -19,6 +19,13 @@ jobs:
       - run: sudo out/qz-tray-*.run
       - run: /opt/qz-tray/qz-tray --version
       - run: ant nsis
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ubuntu-build
+          path: |
+            out/qz-tray-*.run
+            /opt/qz-tray/qz-tray
 
   macos:
     runs-on: [macos-latest]
@@ -42,6 +49,13 @@ jobs:
       - run: "'/Applications/QZ Tray.app/Contents/MacOS/QZ Tray' --version"
       - run: ant makeself
       - run: ant nsis
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: macos-build
+          path: |
+            out/qz-tray-*.pkg
+            /Applications/QZ Tray.app/Contents/MacOS/QZ Tray
 
   windows:
     runs-on: [windows-latest]
@@ -58,3 +72,8 @@ jobs:
       - run: ant nsis
       - run: Start-Process -Wait ./out/qz-tray-*.exe -ArgumentList "/S"
       - run: "&'C:/Program Files/QZ Tray/qz-tray.exe' --wait --version|Out-Null"
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows-build
+          path: out/qz-tray-*.exe
